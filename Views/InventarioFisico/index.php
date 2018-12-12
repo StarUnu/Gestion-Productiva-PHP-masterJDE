@@ -39,7 +39,7 @@
                             <div class="col-md-4">
                                 <label> Inventarios</label>
                                 <select class="form-control" name="Tablas" id="inventarios" onchange="location=this.value;">
-<<<<<<< HEAD
+
 
                                     <option value="<?php echo BASE_URL;?>InventarioBienes" <?php if(isset($this->auxTable) && $this->auxTable=="InventarioBienes")echo 'selected';?> > Inventario de Bienes </option>
 
@@ -50,18 +50,7 @@
 
                                     <option value="<?php echo BASE_URL;?>inventariodeseresvivos" <?php if(isset($this->auxTable) && $this->auxTable=="InventarioSeresVivos")echo 'selected';?> > Inventario de Animales </option>
 
-=======
-                                    <!--la locaidad en donde se encuentra-->
-                                    <option value="<?php echo BASE_URL;?>InventarioFisico" <?php if (isset($this->auxTable) && $this->auxTable=="InventarioFisico") echo 'selected'; ?>>Inventario Fisico</option>
 
-                                    <option value="<?php echo BASE_URL;?>InventarioEquipos" <?php if (isset($this->auxTable) && $this->auxTable=="InventarioEquipo") echo 'selected'; ?> >Inventario de Equipos </option>
-
-                                    <option value="<?php echo BASE_URL;?>InventarioBienes" <?php if(isset($this->auxTable) && $this->auxTable=="InventarioBienes")echo 'selected';?> > Inventario de Bienes </option>
-
-                                    <option value="<?php echo BASE_URL;?>inventariodeseresvivos" <?php if(isset($this->auxTable) && $this->auxTable=="InventarioSeresVivos")echo 'selected';?> > Inventario de Animales </option>
-
-                                    <option value="<?php echo BASE_URL;?>inventariocosecha"<?php if(isset($this->auxTable) && $this->auxTable=="inventariocosecha")echo 'selected';?> > Inventario Cosecha y Otros </option>
->>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
 
                                 </select>             
                             </div>

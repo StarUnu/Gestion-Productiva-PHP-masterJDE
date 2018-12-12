@@ -41,13 +41,10 @@
 										<option value="<?php echo BASE_URL;?>InventarioEquipos" <?php if(isset($this->auxTable) && $this->auxTable=="InventarioEquipos")echo 'selected';?> > Inventario de Equipos </option>
 										<option value="<?php echo BASE_URL;?>InventarioFisico" <?php if(isset($this->auxTable) && $this->auxTable=="InventarioFisico")echo 'selected';?> > Inventario Fisico </option>
                                     <option value="<?php echo BASE_URL;?>inventariodeseresvivos"<?php if(isset($this->auxTable) && $this->auxTable=="InventarioSeresVivos")echo 'selected';?> > Inventario de Animales </option>
-<<<<<<< HEAD
+
                                     <!--
                                     <option value="<?php echo BASE_URL;?>InventarioCosecha"<?php if(isset($this->auxTable) && $this->auxTable=="InventarioCosecha")echo 'selected';?> >Inventario CosechayOtros </option>-->
-=======
 
-                                    <option value="<?php echo BASE_URL;?>InventarioCosecha"<?php if(isset($this->auxTable) && $this->auxTable=="InventarioCosecha")echo 'selected';?> >Inventario CosechayOtros </option>
->>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
 									</select>
 								</div>
 
