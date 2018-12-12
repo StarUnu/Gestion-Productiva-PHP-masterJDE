@@ -246,6 +246,10 @@
         var ctx2 = document.getElementById("chart-area-Egresos").getContext("2d");
         window.myPie = new Chart(ctx, configIngreso);
         window.myPie2 = new Chart(ctx2, configEgreso);
+<<<<<<< HEAD
+=======
+
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
         //Obtener Ingresos
 
         getIngresos($('#Unidad').val())
@@ -256,6 +260,7 @@
                 delete response['success'];
                 $.each(response, function( key, value ) {
                     console.log(value);
+<<<<<<< HEAD
                     //dataIngreso.push(value.Total);
                     //labelsIngreso.push(value.Descripcion);
                     console.log(value.Descripcion + value.Total);
@@ -266,6 +271,18 @@
                 });*/
                 console.log("actualiza el pie",);
                 //configIngreso.data.labels = labelsIngreso;
+=======
+                    dataIngreso.push(value.Total);
+                    labelsIngreso.push(value.Descripcion);
+                    console.log(value.Descripcion + value.Total);
+                });
+                configIngreso.data.datasets.forEach(function(dataset) {
+                    dataset.data = dataIngreso;
+                });
+
+                configIngreso.data.labels = labelsIngreso;
+
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
                 window.myPie.update();
 
                 $("#response-container").html('');
@@ -290,6 +307,7 @@
                 console.log(response);
                 $.each(response, function( key, value ) {
                     console.log(value);
+<<<<<<< HEAD
                     //dataEgreso.push(value.Total);
                     //labelsEgreso.push(value.Descripcion);
                     console.log(value.Descripcion + value.Total);
@@ -299,6 +317,17 @@
                 });
 
                 //configEgreso.data.labels = labelsEgreso;
+=======
+                    dataEgreso.push(value.Total);
+                    labelsEgreso.push(value.Descripcion);
+                    console.log(value.Descripcion + value.Total);
+                });
+                configEgreso.data.datasets.forEach(function(dataset) {
+                    dataset.data = dataEgreso;
+                });
+
+                configEgreso.data.labels = labelsEgreso;
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
 
                 window.myPie2.update();
                 $("#response-container").html('');
@@ -326,6 +355,7 @@
                     console.log(response);
                     $.each(response, function( key, value ) {
                         console.log(value);
+<<<<<<< HEAD
                         //dataIngreso.push(value.Total);
                         //labelsIngreso.push(value.Descripcion);
                         console.log(value.Descripcion + value.Total);
@@ -335,6 +365,17 @@
                     });
 
                     //configIngreso.data.labels = labelsIngreso;
+=======
+                        dataIngreso.push(value.Total);
+                        labelsIngreso.push(value.Descripcion);
+                        console.log(value.Descripcion + value.Total);
+                    });
+                    configIngreso.data.datasets.forEach(function(dataset) {
+                        dataset.data = dataIngreso;
+                    });
+
+                    configIngreso.data.labels = labelsIngreso;
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
 
                     window.myPie.update();
 
@@ -356,6 +397,7 @@
                 dataEgreso = [];
                 labelsEgreso = [];
                 if( response.success ) {
+<<<<<<< HEAD
                     //delete response['success'];
                     console.log(response);
                     $.each(response, function( key, value ) {
@@ -369,6 +411,21 @@
                     });
 
                     //configEgreso.data.labels = labelsEgreso;
+=======
+                    delete response['success'];
+                    console.log(response);
+                    $.each(response, function( key, value ) {
+                        console.log(value);
+                        dataEgreso.push(value.Total);
+                        labelsEgreso.push(value.Descripcion);
+                        console.log(value.Descripcion + value.Total);
+                    });
+                    configEgreso.data.datasets.forEach(function(dataset) {
+                        dataset.data = dataEgreso;
+                    });
+
+                    configEgreso.data.labels = labelsEgreso;
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
 
                     window.myPie2.update();
                     $("#response-container").html('');
@@ -380,11 +437,19 @@
             })
             .fail(function( jqXHR, textStatus, errorThrown ) {
                 alert("Ocurrio un error", textStatus);
+<<<<<<< HEAD
                 //console.log(textStatus);
                 $("#response-container").html("Algo ha fallado: " +  textStatus);
             });
         });
     }); 
+=======
+                console.log(textStatus);
+                $("#response-container").html("Algo ha fallado: " +  textStatus);
+            });
+        });
+    });        
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
     var randomScalingFactor = function() {
         return Math.round(Math.random() * 100);
     };
@@ -433,7 +498,11 @@
             responsive: true,
             tooltips: {
                 callbacks: {
+<<<<<<< HEAD
                     /*label: function(tooltipItem, data) {
+=======
+                    label: function(tooltipItem, data) {
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
@@ -446,13 +515,20 @@
                         }
                         var tooltipPercentage = Math.round((tooltipData / total) * 100);
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
+<<<<<<< HEAD
                     }*/
+=======
+                    }
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
                 }
             }
         }
     };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
     var configEgreso = {
         type: 'pie',
         data: {
@@ -485,7 +561,10 @@
             responsive: true,
             tooltips: {
                 callbacks: {
+<<<<<<< HEAD
                     /*
+=======
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
                     label: function(tooltipItem, data) {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
@@ -496,16 +575,28 @@
                         }
                         var tooltipPercentage = Math.round((tooltipData / total) * 100);
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
+<<<<<<< HEAD
                     }*/
+=======
+                    }
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
                 }
             }
         }
     };
+<<<<<<< HEAD
     
     /*
     * REPORTES
     *
  
+=======
+
+    /*
+    * REPORTES
+    *
+    */
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
 
     $(document).ready()
     {
@@ -662,5 +753,9 @@
             //Browser has blocked it
             alert('Por favor habilite los popups para este sitio.');
         }
+<<<<<<< HEAD
     }   */
+=======
+    }
+>>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
 </script>
