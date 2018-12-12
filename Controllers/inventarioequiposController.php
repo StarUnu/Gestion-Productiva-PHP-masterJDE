@@ -200,11 +200,8 @@
 
             }
 
-<<<<<<< HEAD
+
             header('Location:'.BASE_URL.'Inventarioequipos');
-=======
-            //header('Location:'.BASE_URL.'Inventarioequipos');
->>>>>>> becfce837fc73e48b7cf76d61112550f72f6bbb1
         }
 
         public function Eliminar(){
