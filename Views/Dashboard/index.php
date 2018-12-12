@@ -516,7 +516,7 @@
     /*
     * REPORTES
     *
- 
+    */
 
 
     $(document).ready()
@@ -674,6 +674,6 @@
             //Browser has blocked it
             alert('Por favor habilite los popups para este sitio.');
         }
-    }   */
+    }   
 
 </script>
