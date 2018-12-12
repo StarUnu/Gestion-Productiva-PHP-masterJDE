@@ -1,0 +1,8 @@
+cambios:
+
+- Operaciones: Añadir periodos, que se seleccione el periodo y se añadan operaciones conforme al periodo seleccionado.
+- Operaciones: Añadir campo de concepto.
+- Documentos: upload, subir en digital el documento.
+
+
+

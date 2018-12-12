@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+# Activar RewriteEngine
+RewriteEngine on
+#RewriteBase / 
+#RewriteCond %{SCRIPT_FILENAME} !-d
+#RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+# Reescribir la URL solicitada por el usuario
+#   Entrada:  Alumno/Crud/Id
+#   Salida: alumno.php?id=ID
+#	New Salida : ?c=Alumno&a=Crud&id=
+RewriteRule ^Personas/(\w+)/(\w+)/?$ ?c=Personas&a=$1&Dni=$2
+RewriteRule ^Usuarios/ResetPassword/(\w+)/?$ ?c=Usuarios&a=ResetPassword&Token=$1
+RewriteRule ^(\w+)/(\w+)/Pagina/(\w+)/Unidad/(\w+)/Busqueda/(\w+)?$ ?c=$1&a=$2&page=$3&unidad=$4&search=$5
+RewriteRule ^Dashboard/(\w+)/(\w+)/(\w+)/?$ ?c=Dashboard&a=$1&Unidad=$2&Periodo=$3
+RewriteRule ^Presupuestos/Ejecucion/(\w+)/(\w+)/?$ ?c=Presupuestos&a=Ejecucion&Presupuesto=$1&Concepto=$2
+RewriteRule ^Dashboard/ReporteAnual/(\w+)/?$ ?c=Dashboard&a=ReporteAnual&Periodo=$1
+RewriteRule ^Dashboard/(\w+)/(\w+)/?$ ?c=Dashboard&a=$1&Unidad=$2
+RewriteRule ^(\w+)/(\w+)/Pagina/(\w+)/?$ ?c=$1&a=$2&page=$3
+RewriteRule ^(\w+)/(\w+)/Page/(\w+)/?$ ?c=$1&a=$2&page=$3
+RewriteRule ^(\w+)/(\w+)/(\w+)/?$ ?c=$1&a=$2&Id=$3
+RewriteRule ^(\w+)/(\w+)/?$ ?c=$1&a=$2
+RewriteRule ^(\w+)/?$ ?c=$1
+#RewriteRule ^login/?$ Views/Usuario/login.php
+
+
+</IfModule>
