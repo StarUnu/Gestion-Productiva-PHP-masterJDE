@@ -27,7 +27,7 @@
 				$limit = resultsPerPage;
 				$start = $startFrom;
 				
-				$stmt = $this->pdo->prepare("SELECT * FROM unidadmedida ORDER BY Descripcion ASC LIMIT :startFrom,:resultsPerPage ");
+				$stmt = $this->pdo->prepare("SELECT * FROM UnidadMedida ORDER BY Descripcion ASC LIMIT :startFrom,:resultsPerPage ");
 				$stmt->bindValue(":startFrom", (int)$start, PDO::PARAM_INT);
 				$stmt->bindValue(":resultsPerPage", (int)$limit, PDO::PARAM_INT);
 				$stmt->execute();
@@ -41,7 +41,7 @@
 
 		public function getTotalRecords(){
 			try {
-				$stm = $this->pdo->prepare("SELECT * FROM unidadmedida");
+				$stm = $this->pdo->prepare("SELECT * FROM UnidadMedida");
 				$stm->execute();
 				return $stm->rowCount();
 			} catch (Exception $e) {
@@ -56,7 +56,7 @@
 			try 
 			{
 				$stm = $this->pdo
-				          ->prepare("SELECT * FROM unidadmedida WHERE Id = ?");
+				          ->prepare("SELECT * FROM UnidadMedida WHERE Id = ?");
 				$stm->execute(array($Id));
 				return $stm->fetch(PDO::FETCH_OBJ);
 			} catch (Exception $e) 
@@ -91,7 +91,7 @@
 		{
 			try 
 			{
-				$sql = "INSERT INTO unidadmedida (Id,Descripcion) 
+				$sql = "INSERT INTO UnidadMedida (Id,Descripcion) 
 				        VALUES (?, ?)";
 
 				$this->pdo->prepare($sql)
@@ -112,7 +112,7 @@
 			try 
 			{
 				$stm = $this->pdo
-				            ->prepare("DELETE FROM unidadmedida WHERE Id = ?");			          
+				            ->prepare("DELETE FROM UnidadMedida WHERE Id = ?");			          
 				$stm->execute(array($Id));
 			} catch (Exception $e) 
 			{

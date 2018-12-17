@@ -26,7 +26,7 @@ class TipoMaterial
 				$limit = resultsPerPage;
 				$start = $startFrom;
 				
-				$stmt = $this->pdo->prepare("SELECT * FROM tipomaterial ORDER BY Descripcion ASC LIMIT :startFrom,:resultsPerPage ");
+				$stmt = $this->pdo->prepare("SELECT * FROM TipoMaterial ORDER BY Descripcion ASC LIMIT :startFrom,:resultsPerPage ");
 				$stmt->bindValue(":startFrom", (int)$start, PDO::PARAM_INT);
 				$stmt->bindValue(":resultsPerPage", (int)$limit, PDO::PARAM_INT);
 				$stmt->execute();
@@ -40,7 +40,7 @@ class TipoMaterial
 
 		public function getTotalRecords(){
 			try {
-				$stm = $this->pdo->prepare("SELECT * FROM tipomaterial");
+				$stm = $this->pdo->prepare("SELECT * FROM TipoMaterial");
 
 				$stm->execute();
 				return $stm->rowCount();
@@ -55,7 +55,7 @@ class TipoMaterial
 			try 
 			{
 				$stm = $this->pdo
-				          ->prepare("SELECT * FROM tipomaterial WHERE Id = ?");
+				          ->prepare("SELECT * FROM TipoMaterial WHERE Id = ?");
 				          
 
 				$stm->execute(array($Id));
@@ -70,7 +70,7 @@ class TipoMaterial
 			try 
 			{
 				$stm = $this->pdo
-				          ->prepare("SELECT * FROM tipomaterial WHERE Id = ?");
+				          ->prepare("SELECT * FROM TipoMaterial WHERE Id = ?");
 				          
 
 				$stm->execute(array($Id));
@@ -86,7 +86,7 @@ class TipoMaterial
 		{
 			try 
 			{
-					$sql = "UPDATE tipomaterial SET 
+					$sql = "UPDATE TipoMaterial SET 
 							Descripcion              =  ?
 					    WHERE Id = ?";
 
@@ -107,7 +107,7 @@ class TipoMaterial
 		{
 			try 
 			{
-				$sql = "INSERT INTO tipomaterial (Id,Descripcion) 
+				$sql = "INSERT INTO TipoMaterial (Id,Descripcion) 
 				        VALUES (?, ?)";
 
 				$this->pdo->prepare($sql)
@@ -128,7 +128,7 @@ class TipoMaterial
 			try 
 			{
 				$stm = $this->pdo
-				            ->prepare("DELETE FROM tipomaterial WHERE Id = ?");			          
+				            ->prepare("DELETE FROM TipoMaterial WHERE Id = ?");			          
 				$stm->execute(array($Id));
 
 			} catch (Exception $e) 

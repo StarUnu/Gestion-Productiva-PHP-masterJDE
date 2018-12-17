@@ -26,7 +26,7 @@
 				$limit = resultsPerPage;
 				$start = $startFrom;
 				
-				$stmt = $this->pdo->prepare("SELECT * FROM tipoexistencia ORDER BY Descripcion ASC LIMIT :startFrom,:resultsPerPage ");
+				$stmt = $this->pdo->prepare("SELECT * FROM TipoExistencia ORDER BY Descripcion ASC LIMIT :startFrom,:resultsPerPage ");
 				$stmt->bindValue(":startFrom", (int)$start, PDO::PARAM_INT);
 				$stmt->bindValue(":resultsPerPage", (int)$limit, PDO::PARAM_INT);
 				$stmt->execute();
@@ -40,7 +40,7 @@
 
 		public function getTotalRecords(){
 			try {
-				$stm = $this->pdo->prepare("SELECT * FROM tipoexistencia");
+				$stm = $this->pdo->prepare("SELECT * FROM TipoExistencia");
 
 				$stm->execute();
 				return $stm->rowCount();
@@ -55,7 +55,7 @@
 			try 
 			{
 				$stm = $this->pdo
-				          ->prepare("SELECT * FROM tipoexistencia WHERE Id = ?");
+				          ->prepare("SELECT * FROM TipoExistencia WHERE Id = ?");
 				          
 
 				$stm->execute(array($Id));
@@ -71,7 +71,7 @@
 		{
 			try 
 			{
-					$sql = "UPDATE tipoexistencia SET 
+					$sql = "UPDATE TipoExistencia SET 
 							Descripcion              =  ?
 					    WHERE Id = ?";
 
@@ -92,7 +92,7 @@
 		{
 			try 
 			{
-				$sql = "INSERT INTO tipoexistencia (Id,Descripcion) 
+				$sql = "INSERT INTO TipoExistencia (Id,Descripcion) 
 				        VALUES (?, ?)";
 
 				$this->pdo->prepare($sql)
@@ -113,7 +113,7 @@
 			try 
 			{
 				$stm = $this->pdo
-				            ->prepare("DELETE FROM tipoexistencia WHERE Id = ?");			          
+				            ->prepare("DELETE FROM TipoExistencia WHERE Id = ?");			          
 				$stm->execute(array($Id));
 			} catch (Exception $e) 
 			{
