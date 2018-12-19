@@ -1,0 +1,10 @@
+Requerimientos Proyecto Fina Base de Datos
+1. Agregar lista desplegable para que al ver al personal, se vea por cada unidad productiva. En caso no ser posible que se vea a todo el personal de todas las unidad productivas organizados (alfabeticamente).
+2. Operaciones
+2.1. El administrador no debe poder editar o ingresar en otras unidades productivas solo en la suya (Unidad Central).
+2.2. Solo debe poder ver todo de otras unidades productivas.
+3. Cronograma
+3.1 Solo debe poder ver de todos 
+3.1 Solo debe poder editar el suyo y no de las demas unidades productivas.
+
+OJO: La unidad central debe tener tambien su inventario.
